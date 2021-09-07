@@ -2,10 +2,19 @@ body {
     max-width: 900px;
     margin: auto;
     padding: 8px;
+    font-family: sans-serif;
 }
 
+img {
+  width: 30%;
+  flex-direction: row;
+}
 
-
+.spaces {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 ul {
     list-style-type: none;

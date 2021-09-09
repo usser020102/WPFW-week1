@@ -62,33 +62,51 @@
           genomen in de Sportcampus Zuiderpark. In het nieuwe sportcomplex zullen uiteindelijke circa 1.500 studenten les gaan krijgen.</li>
         
           <h1>Studies</h1>
-          <table>
+          <table id="tabel">
             <tr>
               <th>Studie</th>
               <th>Beschrijving</th>
               <th>Email voor vragen</th>
             </tr>
-            <tr>
-              <td>HBO-ICT</td>
-              <td>176</td>
-              <td>helphboict@hhs.nl</td>
-            </tr>
-            <tr>
-              <td>Finance & Control</td>
-              <td>241</td>
-              <td>helpfinandcon@hhs.nl</td>
-            </tr>
+
           </table>
           <form>
-            <label for="name"> Naam</label><br>
-            <input type="text" id="name" name="name" placeholder="Voer de naam in"><br>
-            <p><small>De officiële naam van de studie</small></p>
-            <label for="student">Aantal studenten</label><br> 
-            <input type="text" id="student" name="student" placeholder="Aantal"><br>
-            <label for="mail">Email voor hulp</label><br> 
-            <input type="text" id="mail" name="mail" placeholder="Voer email in">
+            <label> Naam</label><br>
+            <input type="text" id="naamvak" name="naamvak" placeholder="Voer de naam in"><br>
+            <figcaption>
+            De officiële naam van de studie
+            </figcaption>
+            <label>Aantal studenten</label><br> 
+            <input type="text" id="studentvak" name="studentvak" placeholder="Aantal"><br>
+            <label>Email voor hulp</label><br> 
+            <input type="text" id="emailvak" name="emailvak" placeholder="Voer email in">
           </form>
-          <button type="button">Submit</button>
+          <button type="button" id="knop" onclick="add()">Submit</button>
+
+          <script>
+            function add() {
+              var table = document.getElementById("tabel"),
+              newRow = table.insertRow(table.length),
+              cell1 = newRow.insertCell(0),
+              cell2 = newRow.insertCell(1),
+              cell3 = newRow.insertCell(2),
+
+              naamvak = document.getElementById("naamvak").value,
+              studentvak = document.getElementById("studentvak").value,
+              emailvak = document.getElementById("emailvak").value;
+
+              cell1.innerHTML = naamvak;
+              cell1.style.backgroundColor = "red";
+              
+              cell2.innerHTML = studentvak;
+              cell2.style.backgroundColor = "baby-blue";
+              
+              cell3.innerHTML = emailvak;  
+              cell3.style.backgroundColor = "green";  
+            
+
+           }
+          </script>
         </body>
     
 </html>
